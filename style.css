@@ -1,0 +1,225 @@
+@font-face {
+    font-family: Gilroy;
+    src: url(/fonts/Gilroy-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gilroy';
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    display:flex;
+    width:100%;
+    height:100%;
+}
+.left-div{
+    width:40%;
+    height:100%;
+}
+.left-div .left-nav{
+    height:10vh; 
+    display:flex;
+    width:100%;
+    padding:1vw 2.5vw;
+}
+.left-nav a{
+    display:inline-block;
+    position:relative;  
+    text-decoration: none;
+    color:black;
+    font-size:1.2vw;
+}
+.righty-nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0%;
+    height:2px;
+    background-color:#8d8585;  
+    transition:all cubic-bezier(0.19, 1, 0.22, 1) 1s;  
+}
+.righty-nav a:hover::after{
+    width:100%;
+}
+.left-nav i{
+    font-size:1.3vw;
+}
+.ri-twitter-line{
+    color:blue;
+}
+.lefty-nav{
+    width:10%;
+    display:flex;
+    align-items: flex-start;
+}
+.righty-nav{
+    width:calc(100% - 10%);
+    display:flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding:0 7vw;
+    gap:4vw;
+}
+.hero{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap:1vw;   
+    width: 100%;
+    height:calc(100% - 10%);
+}
+.hero h1{
+    margin-right: 5.5vw;
+    font-size:5vw;
+    font-weight: 900;
+}
+.hero p{
+     font-size:1.2vw;
+     opacity:0.6;
+}
+.hero h5{
+    pointer-events:all;
+    position:relative;
+    font-size:1.1vw;    
+    font-weight: 700;
+    margin-right:15vw;     
+
+}
+.hero h5::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0%;
+    height:2px;
+    background-color:#8d8585;  
+    transition:all cubic-bezier(0.19, 1, 0.22, 1) 1s;  
+}
+.hero h5:hover::after{
+    width:100%;
+}
+/* start of right part */
+.right-div{
+    width:60%;
+    height:100%;
+}
+.right-top{
+    display:flex;
+    width:100%;
+    height:50%;
+}
+.top-left{
+    position:relative;
+    width:55%;
+    height:100%;
+    background-image: url(https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW9kZXJuJTIwZ2lybCUyMGltYWdlJTIwd2l0aCUyMHllbGxvdyUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D);
+    background-size: cover;
+    background-position:0% 38%;
+}
+.top-left h1{
+    position:absolute;
+    top:5%;
+    left: 15%;
+    font-size:7vw;
+    color:rgb(247, 241, 241);  
+}
+.top-right{
+    width:45%;
+    height:100%;
+    background-color: aqua;
+    background-image: url(https://media.istockphoto.com/id/1193746031/photo/healthy-asian-girl-in-summer-outfit-drinking-orange-juice.jpg?b=1&s=612x612&w=0&k=20&c=wCdVJ7VrF6Xk3fTw77BhZBA9eDF4BZf5HaJtwKmNb-4=);
+    background-size: cover;
+    background-position: right;
+}
+.right-bottom{
+    display:flex;
+    align-items:flex-end;
+    width:100%;
+    height:50%;
+    background-color: yellow;
+    background-image: url(https://c1.wallpaperflare.com/preview/743/278/460/596877991571d.jpg);
+    background-size: cover;
+    background-position:0% 70%;
+}
+.left-bottom{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:2vw;
+    width:25vh;
+    height:15vh;
+    background-color: white;
+}
+.left-bottom i{
+    padding-left:1.5vw;
+    font-size:2.5vw;
+    opacity:0.5;
+}
+
+/* media */
+@media (max-width: 768px) {
+    #main{
+        flex-direction: column;
+    }
+    .left-div {
+        width: 100%;
+
+    }
+
+    .right-div {
+        width: 100%;
+    }
+
+    .left-nav a {
+        font-size: 3vw;
+    }
+
+    .hero h1 {
+        font-size: 7vw;
+    }
+
+    .hero p {
+        font-size: 3vw;
+    }
+
+    .hero h5 {
+        font-size: 2.5vw;
+    }
+}
+
+/* Media query for screens with a maximum width of 500 pixels */
+@media (max-width: 500px) {
+    .left-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .left-nav a {
+        font-size: 4vw;
+    }
+
+    .hero h1 {
+        font-size: 6vw;
+    }
+
+    .hero p {
+        font-size: 2.5vw;
+    }
+
+    .hero h5 {
+        font-size: 2vw;
+    }
+
+    .right-div {
+        width: 100%;
+    }
+
+    /* Add more specific styles for other elements as needed */
+}
